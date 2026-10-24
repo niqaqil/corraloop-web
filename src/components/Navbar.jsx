@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Flame, Menu, X, ArrowRight, Activity, Trophy, Users, Shield } from 'lucide-react';
+import { Menu, X, ArrowRight, MapPin, Users, Calendar } from 'lucide-react';
 
 export default function Navbar({ onOpenJoin }) {
   const [scrolled, setScrolled] = useState(false);
@@ -14,27 +14,28 @@ export default function Navbar({ onOpenJoin }) {
   }, []);
 
   const navLinks = [
-    { name: 'The Loop System', href: '#loop-system' },
-    { name: 'Live Challenges', href: '#challenges' },
-    { name: 'Interactive Simulator', href: '#simulator' },
-    { name: 'Community Feed', href: '#community' },
-    { name: 'Crew Impact', href: '#calculator' },
+    { name: 'Communities', href: '#communities' },
+    { name: 'Group Runs', href: '#group-runs' },
+    { name: 'How Check-in Works', href: '#checkin-radar' },
+    { name: 'Runner Streaks', href: '#runner-stats' },
+    { name: 'For Organizers', href: '#organizers' },
   ];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-[#0b0f17]/85 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/20 py-3' 
+        ? 'bg-[#0b0f17]/90 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/30 py-3' 
         : 'bg-transparent py-5'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
+          
           {/* Logo Brand */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 rounded-xl overflow-hidden p-0.5 bg-gradient-to-tr from-loopgreen-500 via-white/20 to-corral-500 shadow-md group-hover:scale-105 transition-transform duration-300">
               <img 
                 src="/logo-icon.svg" 
-                alt="corraloop mark" 
+                alt="Corraloop logo" 
                 className="w-full h-full object-contain rounded-lg p-0.5"
               />
             </div>
@@ -44,7 +45,7 @@ export default function Navbar({ onOpenJoin }) {
                 <span className="ml-1 w-2 h-2 rounded-full bg-loopgreen-400 animate-pulse"></span>
               </span>
               <span className="text-[10px] uppercase font-bold tracking-widest text-slate-400 -mt-1">
-                The Movement Network
+                Running Community
               </span>
             </div>
           </a>
@@ -55,7 +56,7 @@ export default function Navbar({ onOpenJoin }) {
               <a
                 key={link.name}
                 href={link.href}
-                className="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-colors"
+                className="px-3.5 py-1.5 text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-colors"
               >
                 {link.name}
               </a>
@@ -68,7 +69,7 @@ export default function Navbar({ onOpenJoin }) {
               onClick={onOpenJoin}
               className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors"
             >
-              Log In
+              Sign In
             </button>
             <button
               onClick={onOpenJoin}
@@ -76,7 +77,7 @@ export default function Navbar({ onOpenJoin }) {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-corral-500 via-corral-400 to-loopgreen-500 transition-all duration-300 group-hover:opacity-90"></div>
               <span className="relative z-10 flex items-center gap-1.5">
-                Join the Loop
+                Join a Run Club
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
             </button>
@@ -88,11 +89,12 @@ export default function Navbar({ onOpenJoin }) {
               onClick={onOpenJoin}
               className="px-3 py-1.5 text-xs font-semibold rounded-full bg-corral-500 text-white"
             >
-              Join
+              Join Club
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg bg-darkbg-card border border-white/10 text-slate-300 hover:text-white"
+              aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -120,13 +122,13 @@ export default function Navbar({ onOpenJoin }) {
               onClick={() => { setMobileMenuOpen(false); onOpenJoin(); }}
               className="w-full py-3 text-center text-sm font-semibold rounded-xl bg-gradient-to-r from-corral-500 to-loopgreen-500 text-white shadow-glow-coral"
             >
-              Join corraloop Free
+              Join a Running Community
             </button>
             <button
               onClick={() => { setMobileMenuOpen(false); onOpenJoin(); }}
               className="w-full py-2.5 text-center text-sm font-medium rounded-xl text-slate-400 hover:text-white hover:bg-white/5"
             >
-              Existing Member Sign In
+              Runner Sign In
             </button>
           </div>
         </div>

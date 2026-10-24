@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Github, Twitter, Instagram, Heart, CheckCircle2 } from 'lucide-react';
+import { Github, Twitter, Instagram, CheckCircle2, MapPin, Users } from 'lucide-react';
 
 export default function Footer({ onOpenJoin }) {
   const [subscribed, setSubscribed] = useState(false);
@@ -27,8 +27,8 @@ export default function Footer({ onOpenJoin }) {
               <div className="w-9 h-9 rounded-xl overflow-hidden p-0.5 bg-gradient-to-tr from-loopgreen-500 to-corral-500 shadow-md">
                 <img 
                   src="/logo-icon.svg" 
-                  alt="corraloop" 
-                  className="w-full h-full object-contain rounded-lg"
+                  alt="Corraloop" 
+                  className="w-full h-full object-contain rounded-lg p-0.5"
                 />
               </div>
               <span className="text-2xl font-black text-white tracking-tight">
@@ -37,70 +37,65 @@ export default function Footer({ onOpenJoin }) {
             </div>
 
             <p className="text-slate-400 text-sm max-w-sm leading-relaxed">
-              The social movement network bridging personal athletic achievement with collective crew momentum. Close your loops, fuel your squad, elevate your health.
+              Free group runs and GPS attendance tracking for local running communities. Real runners showing up in real life.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
               <a 
-                href="https://github.com" 
+                href="https://github.com/niqaqil/corraloop" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="w-9 h-9 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white flex items-center justify-center transition-colors"
-                title="GitHub Repository"
+                title="Android App GitHub Repository"
               >
                 <Github className="w-4 h-4" />
               </a>
               <a 
-                href="#" 
+                href="https://github.com/niqaqil/corraloop-web" 
+                target="_blank" 
+                rel="noreferrer" 
                 className="w-9 h-9 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white flex items-center justify-center transition-colors"
-                title="Twitter"
+                title="Website GitHub Repository"
               >
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a 
-                href="#" 
-                className="w-9 h-9 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white flex items-center justify-center transition-colors"
-                title="Instagram"
-              >
-                <Instagram className="w-4 h-4" />
+                <Github className="w-4 h-4 text-corral-400" />
               </a>
             </div>
           </div>
 
-          {/* Nav col 1 */}
+          {/* Running Community Links */}
           <div>
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Ecosystem</h4>
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Community</h4>
             <ul className="space-y-2.5 text-xs">
-              <li><a href="#loop-system" className="hover:text-white transition-colors">The Loop Algorithm</a></li>
-              <li><a href="#challenges" className="hover:text-white transition-colors">Live Challenges</a></li>
-              <li><a href="#simulator" className="hover:text-white transition-colors">Loop Simulator</a></li>
-              <li><a href="#community" className="hover:text-white transition-colors">Global Leaderboards</a></li>
-              <li><a href="#calculator" className="hover:text-white transition-colors">Crew Momentum Calculator</a></li>
+              <li><a href="#communities" className="hover:text-white transition-colors">Browse Run Clubs</a></li>
+              <li><a href="#communities" className="hover:text-white transition-colors">San Francisco Clubs</a></li>
+              <li><a href="#communities" className="hover:text-white transition-colors">New York Strides</a></li>
+              <li><a href="#communities" className="hover:text-white transition-colors">Austin Trail Blazers</a></li>
+              <li><a href="#organizers" className="hover:text-white transition-colors">Start a Local Club</a></li>
             </ul>
           </div>
 
-          {/* Nav col 2 */}
+          {/* Product & Architecture Links */}
           <div>
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Integrations</h4>
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Features</h4>
             <ul className="space-y-2.5 text-xs">
-              <li><a href="#" className="hover:text-white transition-colors">Strava API Sync</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Garmin Connect SDK</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Apple HealthKit</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Wahoo & Polar</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Developer Portal</a></li>
+              <li><a href="#checkin-radar" className="hover:text-white transition-colors">100m Proximity Radar</a></li>
+              <li><a href="#checkin-radar" className="hover:text-white transition-colors">Single-Shot GPS Check</a></li>
+              <li><a href="#runner-stats" className="hover:text-white transition-colors">Verified Mileage Logs</a></li>
+              <li><a href="#runner-stats" className="hover:text-white transition-colors">Group Run Streaks</a></li>
+              <li><a href="#organizers" className="hover:text-white transition-colors">Organizer Scheduling</a></li>
             </ul>
           </div>
 
           {/* Newsletter subscription */}
           <div>
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Stay in the Loop</h4>
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Join Local Updates</h4>
             <p className="text-xs text-slate-400 mb-3">
-              Weekly curated challenges, local club meetups, and fitness technology drops.
+              Receive notifications when new run clubs or group sessions launch in your area.
             </p>
             {subscribed ? (
               <div className="p-3 rounded-xl bg-loopgreen-500/10 border border-loopgreen-500/30 text-loopgreen-400 text-xs font-bold flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 shrink-0" />
-                <span>You're in the loop! Check your inbox.</span>
+                <span>You're connected! Watch your inbox.</span>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="space-y-2">
@@ -108,7 +103,7 @@ export default function Footer({ onOpenJoin }) {
                   <input
                     type="email"
                     required
-                    placeholder="athlete@movement.com"
+                    placeholder="runner@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full px-3 py-2 text-xs rounded-xl bg-darkbg-card border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-corral-500"
@@ -128,11 +123,11 @@ export default function Footer({ onOpenJoin }) {
 
         {/* Bottom info */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} corraloop. All rights reserved. Designed for active communities everywhere.</p>
+          <p>© {new Date().getFullYear()} Corraloop. Free group runs & community attendance for runners everywhere.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-slate-400 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-slate-400 transition-colors">Security & Health Data</a>
+            <a href="#" className="hover:text-slate-400 transition-colors">Community Guidelines</a>
+            <a href="#" className="hover:text-slate-400 transition-colors">Android App</a>
           </div>
         </div>
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import InteractiveLoopDemo from './components/InteractiveLoopDemo';
-import ChallengesSection from './components/ChallengesSection';
-import CrewCalculator from './components/CrewCalculator';
+import CommunitiesSection from './components/CommunitiesSection';
+import CheckinVisualizer from './components/CheckinVisualizer';
+import RunnerStatsShowcase from './components/RunnerStatsShowcase';
 import CommunityFeed from './components/CommunityFeed';
 import Footer from './components/Footer';
 import JoinModal from './components/JoinModal';
@@ -14,8 +14,8 @@ export default function App() {
   const handleOpenJoin = () => setIsJoinOpen(true);
   const handleCloseJoin = () => setIsJoinOpen(false);
 
-  const scrollToSimulator = () => {
-    const el = document.getElementById('simulator');
+  const scrollToRadar = () => {
+    const el = document.getElementById('checkin-radar');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -30,18 +30,18 @@ export default function App() {
       <main className="flex-grow">
         <Hero 
           onOpenJoin={handleOpenJoin} 
-          onOpenSimulator={scrollToSimulator} 
+          onScrollToRadar={scrollToRadar} 
         />
         
-        <InteractiveLoopDemo 
+        <CommunitiesSection 
           onOpenJoin={handleOpenJoin} 
         />
 
-        <ChallengesSection 
+        <CheckinVisualizer 
           onOpenJoin={handleOpenJoin} 
         />
 
-        <CrewCalculator 
+        <RunnerStatsShowcase 
           onOpenJoin={handleOpenJoin} 
         />
 
@@ -53,7 +53,7 @@ export default function App() {
       {/* Footer */}
       <Footer onOpenJoin={handleOpenJoin} />
 
-      {/* Interactive Modal */}
+      {/* Interactive Join / Athlete Modal */}
       <JoinModal 
         isOpen={isJoinOpen} 
         onClose={handleCloseJoin} 

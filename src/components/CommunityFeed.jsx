@@ -1,62 +1,51 @@
 import React, { useState } from 'react';
-import { Heart, MessageSquare, Share2, Flame, MapPin, Zap, CheckCircle2, TrendingUp } from 'lucide-react';
+import { Flame, MapPin, CheckCircle2, MessageSquare, Share2, Users } from 'lucide-react';
 
 export default function CommunityFeed({ onOpenJoin }) {
   const [activities, setActivities] = useState([
     {
       id: 1,
-      user: 'Maya Lin',
-      handle: '@mayamiles',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
-      club: 'Golden Gate Runners',
-      title: 'Sunrise Ridge Sprint — 3rd Loop of the week!',
-      sport: 'Running',
-      distance: '12.2 km',
-      time: '52:14',
-      elevation: '210m',
-      kudos: 42,
+      user: 'Elena Vance',
+      role: 'Club Organizer',
+      club: 'Marina Sunrise Runners',
+      city: 'San Francisco, CA',
+      title: 'Embarcadero Sunrise 5K — Great morning turnout with coffee at Ferry Building!',
+      distance: '5.0 km',
+      attendees: 18,
+      kudos: 34,
       hasKudos: false,
-      timestamp: '14m ago',
-      loopAchieved: 'Closed Gold Loop #42',
-      badgeColor: 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+      timestamp: '25m ago',
+      verifiedLocation: 'Verified within 18m of South Arches'
     },
     {
       id: 2,
-      user: 'Liam O’Connor',
-      handle: '@liamcycles',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
-      club: 'Dublin Peloton Crew',
-      title: 'Wet Sunday Century Ride through Wicklow Mountains',
-      sport: 'Cycling',
-      distance: '104.5 km',
-      time: '3h 18m',
-      elevation: '1,420m',
-      kudos: 89,
+      user: 'Marcus Reed',
+      role: 'Active Runner',
+      club: 'Marina Sunrise Runners',
+      city: 'San Francisco, CA',
+      title: 'Presidio Coastal 10K — Foggy start, sunny finish along Crissy Field!',
+      distance: '10.0 km',
+      attendees: 24,
+      kudos: 48,
       hasKudos: false,
-      timestamp: '42m ago',
-      loopAchieved: 'Unlocked Century Looper Crest',
-      badgeColor: 'bg-loopgreen-500/10 text-loopgreen-400 border-loopgreen-500/20'
+      timestamp: '2h ago',
+      verifiedLocation: 'Verified within 22m of Warming Hut'
     },
     {
       id: 3,
-      user: 'Chloe Dubois',
-      handle: '@chloefit',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
-      club: 'Parisian Track Club',
-      title: 'Intervals 8x800m + Cold Recovery Dip',
-      sport: 'Track & Recovery',
-      distance: '8.4 km',
-      time: '38:00',
-      elevation: '45m',
-      kudos: 67,
+      user: 'Sarah Jenkins',
+      role: 'Club Founder',
+      club: 'Central Park Strides',
+      city: 'New York, NY',
+      title: 'Classic Reservoir 4-Miler — 5-week streak milestone for our Wednesday morning crew!',
+      distance: '6.4 km',
+      attendees: 31,
+      kudos: 56,
       hasKudos: false,
-      timestamp: '1h ago',
-      loopAchieved: 'Maintained 30-Day Daily Streak',
-      badgeColor: 'bg-corral-500/10 text-corral-400 border-corral-500/20'
+      timestamp: 'Yesterday',
+      verifiedLocation: 'Verified within 15m of Columbus Circle'
     }
   ]);
-
-  const [activeFilter, setActiveFilter] = useState('All');
 
   const toggleCheer = (id) => {
     setActivities(activities.map(act => {
@@ -78,18 +67,18 @@ export default function CommunityFeed({ onOpenJoin }) {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-loopgreen-500/10 border border-loopgreen-500/20 text-loopgreen-400 text-xs font-bold uppercase tracking-wider mb-3">
-            <Zap className="w-3.5 h-3.5" />
-            Real-Time Community Pulse
+            <Users className="w-3.5 h-3.5" />
+            Live Community Activity
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            See Who’s Closing Loops <span className="gradient-text-emerald">Right Now</span>
+            See Who’s Showing Up <span className="gradient-text-emerald">Across Cities</span>
           </h2>
           <p className="mt-3 text-slate-400 text-base">
-            Every workout feeds into the global corraloop feed. Cheer on fellow athletes, celebrate streaks, and find inspiration for tomorrow's session.
+            Every verified check-in updates your club’s community attendance. Cheer on fellow runners and get inspired for your next local meetup.
           </p>
         </div>
 
-        {/* Live Feed Container */}
+        {/* Feed Cards */}
         <div className="max-w-3xl mx-auto space-y-6">
           {activities.map((item) => (
             <div
@@ -99,46 +88,48 @@ export default function CommunityFeed({ onOpenJoin }) {
               {/* User row */}
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3.5">
-                  <img
-                    src={item.avatar}
-                    alt={item.user}
-                    className="w-12 h-12 rounded-2xl object-cover border border-white/10"
-                  />
+                  <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-corral-500 to-loopgreen-500 p-0.5">
+                    <div className="w-full h-full bg-darkbg rounded-2xl flex items-center justify-center font-black text-white text-sm">
+                      {item.user.split(' ').map(n => n[0]).join('')}
+                    </div>
+                  </div>
                   <div>
                     <div className="flex items-center gap-2">
                       <h4 className="font-bold text-white text-base">{item.user}</h4>
-                      <span className="text-xs text-slate-400">{item.handle}</span>
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/5 text-slate-300 border border-white/10">
+                        {item.role}
+                      </span>
                     </div>
-                    <p className="text-xs text-loopgreen-400 font-medium">{item.club}</p>
+                    <p className="text-xs text-loopgreen-400 font-medium">{item.club} • {item.city}</p>
                   </div>
                 </div>
 
                 <div className="text-right">
                   <span className="text-xs text-slate-500 font-mono">{item.timestamp}</span>
-                  <div className={`mt-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${item.badgeColor}`}>
-                    {item.loopAchieved}
+                  <div className="mt-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-loopgreen-500/20 text-loopgreen-300 border border-loopgreen-500/30 inline-flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> Verified Check-in
                   </div>
                 </div>
               </div>
 
-              {/* Title */}
-              <h3 className="text-lg font-bold text-slate-100 mt-4">
+              {/* Title / Description */}
+              <h3 className="text-base sm:text-lg font-bold text-slate-100 mt-4 leading-snug">
                 {item.title}
               </h3>
 
-              {/* Workout Stat Badges */}
-              <div className="grid grid-cols-3 gap-3 my-4">
+              {/* Verified Run Metrics */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 my-4">
                 <div className="bg-darkbg/80 p-2.5 rounded-xl border border-white/5 text-center">
                   <span className="text-[10px] uppercase font-bold text-slate-400 block">Distance</span>
                   <span className="text-sm font-extrabold text-white">{item.distance}</span>
                 </div>
                 <div className="bg-darkbg/80 p-2.5 rounded-xl border border-white/5 text-center">
-                  <span className="text-[10px] uppercase font-bold text-slate-400 block">Moving Time</span>
-                  <span className="text-sm font-extrabold text-loopgreen-400">{item.time}</span>
+                  <span className="text-[10px] uppercase font-bold text-slate-400 block">Group Attendees</span>
+                  <span className="text-sm font-extrabold text-loopgreen-400">{item.attendees} runners</span>
                 </div>
-                <div className="bg-darkbg/80 p-2.5 rounded-xl border border-white/5 text-center">
-                  <span className="text-[10px] uppercase font-bold text-slate-400 block">Elevation</span>
-                  <span className="text-sm font-extrabold text-corral-400">+{item.elevation}</span>
+                <div className="col-span-2 sm:col-span-1 bg-darkbg/80 p-2.5 rounded-xl border border-white/5 text-center">
+                  <span className="text-[10px] uppercase font-bold text-slate-400 block">GPS Verification</span>
+                  <span className="text-xs font-bold text-slate-300 truncate block mt-0.5">{item.verifiedLocation}</span>
                 </div>
               </div>
 
@@ -162,7 +153,7 @@ export default function CommunityFeed({ onOpenJoin }) {
                     className="flex items-center gap-1.5 hover:text-white transition-colors"
                   >
                     <MessageSquare className="w-4 h-4" />
-                    <span>Cheer Back</span>
+                    <span>View Club</span>
                   </button>
                 </div>
 
@@ -171,7 +162,7 @@ export default function CommunityFeed({ onOpenJoin }) {
                   className="flex items-center gap-1 hover:text-white transition-colors"
                 >
                   <Share2 className="w-3.5 h-3.5" />
-                  <span>Share Loop</span>
+                  <span>Share Run</span>
                 </button>
               </div>
             </div>
@@ -183,7 +174,7 @@ export default function CommunityFeed({ onOpenJoin }) {
               onClick={onOpenJoin}
               className="px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-white bg-darkbg-card hover:bg-darkbg-subtle border border-white/10 transition-colors"
             >
-              Load 50+ More Live Activities in Your Region →
+              Explore More Run Clubs & Sessions →
             </button>
           </div>
         </div>
