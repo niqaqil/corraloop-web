@@ -275,8 +275,8 @@ export default function InteractiveLoopDemo({ onOpenJoin }) {
 
               {/* Center Emblem & Celebration Badge */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-                <div className="w-14 h-14 rounded-2xl bg-darkbg p-2 shadow-2xl border border-white/10 flex items-center justify-center mb-1">
-                  <img src="/logo-icon.png" alt="corraloop" className="w-full h-full object-contain" />
+                <div className="w-14 h-14 rounded-2xl bg-darkbg p-1.5 shadow-2xl border border-white/10 flex items-center justify-center mb-1">
+                  <img src="/logo-icon.svg" alt="corraloop" className="w-full h-full object-contain" />
                 </div>
                 {allLoopsClosed ? (
                   <div className="animate-bounce">

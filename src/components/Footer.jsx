@@ -26,9 +26,9 @@ export default function Footer({ onOpenJoin }) {
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl overflow-hidden p-0.5 bg-gradient-to-tr from-loopgreen-500 to-corral-500 shadow-md">
                 <img 
-                  src="/logo-icon.png" 
+                  src="/logo-icon.svg" 
                   alt="corraloop" 
-                  className="w-full h-full object-contain rounded-lg bg-[#070a10]"
+                  className="w-full h-full object-contain rounded-lg"
                 />
               </div>
               <span className="text-2xl font-black text-white tracking-tight">

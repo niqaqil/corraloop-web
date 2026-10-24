@@ -33,9 +33,9 @@ export default function Navbar({ onOpenJoin }) {
           <a href="#" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 rounded-xl overflow-hidden p-0.5 bg-gradient-to-tr from-loopgreen-500 via-white/20 to-corral-500 shadow-md group-hover:scale-105 transition-transform duration-300">
               <img 
-                src="/logo-icon.png" 
+                src="/logo-icon.svg" 
                 alt="corraloop mark" 
-                className="w-full h-full object-contain rounded-lg bg-[#0b0f17]"
+                className="w-full h-full object-contain rounded-lg p-0.5"
               />
             </div>
             <div className="flex flex-col">

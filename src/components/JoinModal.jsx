@@ -52,7 +52,7 @@ export default function JoinModal({ isOpen, onClose }) {
             {/* Header */}
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-xl overflow-hidden p-0.5 bg-gradient-to-tr from-loopgreen-500 to-corral-500">
-                <img src="/logo-icon.png" alt="corraloop" className="w-full h-full object-contain rounded-lg bg-darkbg" />
+                <img src="/logo-icon.svg" alt="corraloop" className="w-full h-full object-contain rounded-lg" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white flex items-center gap-1.5">
@@ -190,7 +190,7 @@ export default function JoinModal({ isOpen, onClose }) {
               <div className="flex justify-between items-start">
                 <div>
                   <div className="flex items-center gap-2">
-                    <img src="/logo-icon.png" alt="corraloop" className="w-7 h-7 object-contain" />
+                    <img src="/logo-icon.svg" alt="corraloop" className="w-8 h-8 object-contain" />
                     <span className="font-extrabold text-white text-base">corraloop</span>
                   </div>
                   <span className="text-[10px] text-loopgreen-400 font-mono tracking-wider block mt-0.5">

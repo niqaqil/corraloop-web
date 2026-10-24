@@ -79,10 +79,12 @@ git push -u origin main
 ```text
 corraloop/
 ├── public/
-│   ├── logo-icon.png           # Corraloop emblem
-│   └── logo-full.jpg           # Full wordmark logo
+│   ├── logo-icon.svg           # High-resolution vector emblem
+│   ├── logo-full.svg           # Vector logo with wordmark
+│   ├── logo-icon.png           # Corraloop emblem (PNG fallback)
+│   └── logo-full.jpg           # Full wordmark logo (JPG fallback)
 ├── src/
-│   ├── assets/                 # Brand assets
+│   ├── assets/                 # Brand assets (corraloop_logo.svg, corraloop_logo_only.svg)
 │   ├── components/
 │   │   ├── Navbar.jsx          # Glassmorphic header & navigation
 │   │   ├── Hero.jsx            # Dynamic hero with active sports metrics

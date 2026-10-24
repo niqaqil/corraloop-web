@@ -210,7 +210,7 @@ export default function Hero({ onOpenJoin, onOpenSimulator }) {
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
                     <div className="w-16 h-16 rounded-2xl bg-darkbg p-2 shadow-inner border border-white/10 flex items-center justify-center mb-1">
                       <img 
-                        src="/logo-icon.png" 
+                        src="/logo-icon.svg" 
                         alt="corraloop icon" 
                         className="w-full h-full object-contain filter drop-shadow animate-pulseSlow"
                       />
