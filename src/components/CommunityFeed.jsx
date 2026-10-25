@@ -5,11 +5,11 @@ export default function CommunityFeed({ onOpenJoin }) {
   const [activities, setActivities] = useState([
     {
       id: 1,
-      user: 'Elena Vance',
+      user: 'Aina Rahman',
       role: 'Club Organizer',
-      club: 'Marina Sunrise Runners',
-      city: 'San Francisco, CA',
-      title: 'Embarcadero Sunrise 5K — Great morning turnout with coffee at Ferry Building!',
+      club: 'Kelana Jaya Run Club',
+      city: 'Petaling Jaya, Selangor',
+      title: 'Taman Tasik Kelana Jaya 5K — Great morning turnout with coffee at Taman Tasik Kelana Jaya!',
       distance: '5.0 km',
       attendees: 18,
       kudos: 34,
@@ -19,31 +19,31 @@ export default function CommunityFeed({ onOpenJoin }) {
     },
     {
       id: 2,
-      user: 'Marcus Reed',
+      user: 'Amir Hakim',
       role: 'Active Runner',
-      club: 'Marina Sunrise Runners',
-      city: 'San Francisco, CA',
-      title: 'Presidio Coastal 10K — Foggy start, sunny finish along Crissy Field!',
+      club: 'Kelana Jaya Run Club',
+      city: 'Petaling Jaya, Selangor',
+      title: 'Bukit Gasing Easy 10K — Foggy start, sunny finish along Bukit Gasing!',
       distance: '10.0 km',
       attendees: 24,
       kudos: 48,
       hasKudos: false,
       timestamp: '2h ago',
-      verifiedLocation: 'Verified within 22m of Warming Hut'
+      verifiedLocation: 'Verified within 22m of Bukit Gasing trailhead'
     },
     {
       id: 3,
-      user: 'Sarah Jenkins',
+      user: 'Mei Lin',
       role: 'Club Founder',
-      club: 'Central Park Strides',
-      city: 'New York, NY',
-      title: 'Classic Reservoir 4-Miler — 5-week streak milestone for our Wednesday morning crew!',
+      club: 'Penang City Running Runners',
+      city: 'George Town, Pulau Pinang',
+      title: 'Gurney Drive Midweek 6K — 5-week streak milestone for our Wednesday morning crew!',
       distance: '6.4 km',
       attendees: 31,
       kudos: 56,
       hasKudos: false,
       timestamp: 'Yesterday',
-      verifiedLocation: 'Verified within 15m of Columbus Circle'
+      verifiedLocation: 'Verified within 15m of Gurney Drive promenade'
     }
   ]);
 

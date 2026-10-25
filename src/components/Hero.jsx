@@ -118,8 +118,8 @@ export default function Hero({ onOpenJoin, onScrollToRadar }) {
                     <img src="/logo-icon.svg" alt="Corraloop" className="w-full h-full object-contain" />
                   </div>
                   <div>
-                    <span className="text-sm font-bold text-white block">Marina Sunrise Runners</span>
-                    <span className="text-[10px] text-slate-400 block -mt-0.5">San Francisco, CA • Elena Vance</span>
+                    <span className="text-sm font-bold text-white block">Kelana Jaya Run Club</span>
+                    <span className="text-[10px] text-slate-400 block -mt-0.5">Petaling Jaya, Selangor • Community Run</span>
                   </div>
                 </div>
 
@@ -134,11 +134,11 @@ export default function Hero({ onOpenJoin, onScrollToRadar }) {
                 {/* Run Title */}
                 <div>
                   <h3 className="text-2xl font-extrabold text-white tracking-tight">
-                    Embarcadero Sunrise 5K
+                    Taman Tasik Kelana Jaya 5K
                   </h3>
                   <div className="flex items-center gap-2 text-xs text-slate-400 mt-1">
                     <Calendar className="w-3.5 h-3.5 text-corral-400 shrink-0" />
-                    <span>Tomorrow • 6:30 AM</span>
+                    <span>Sunday • 7:00 AM (MYT)</span>
                   </div>
                 </div>
 
@@ -154,8 +154,8 @@ export default function Hero({ onOpenJoin, onScrollToRadar }) {
                     <MapPin className="w-4 h-4 text-corral-400 shrink-0 mt-0.5" />
                     <div>
                       <span className="text-[10px] uppercase font-bold text-slate-400 block">Meeting Point</span>
-                      <span className="text-xs font-semibold text-white block">Ferry Building Plaza, San Francisco</span>
-                      <span className="text-[11px] text-slate-400 block mt-0.5">Meet by the south clock tower arches</span>
+                      <span className="text-xs font-semibold text-white block">Taman Tasik Kelana Jaya, Petaling Jaya</span>
+                      <span className="text-[11px] text-slate-400 block mt-0.5">Meet by the main park entrance</span>
                     </div>
                   </div>
 
@@ -192,7 +192,7 @@ export default function Hero({ onOpenJoin, onScrollToRadar }) {
                           <span className="w-7 h-7 rounded-full bg-emerald-600 border-2 border-darkbg text-[10px] flex items-center justify-center font-bold text-white shadow animate-in zoom-in">YOU</span>
                         )}
                       </div>
-                      <span className="text-[11px] text-slate-400">Sarah, David & crew</span>
+                      <span className="text-[11px] text-slate-400">Aina, Amir & crew</span>
                     </div>
 
                     <span className="text-[10px] px-2 py-0.5 rounded-full bg-loopgreen-500/20 text-loopgreen-300 font-bold border border-loopgreen-500/30 flex items-center gap-1">

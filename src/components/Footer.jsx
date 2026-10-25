@@ -67,9 +67,9 @@ export default function Footer({ onOpenJoin }) {
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Community</h4>
             <ul className="space-y-2.5 text-xs">
               <li><a href="#communities" className="hover:text-white transition-colors">Browse Run Clubs</a></li>
-              <li><a href="#communities" className="hover:text-white transition-colors">San Francisco Clubs</a></li>
-              <li><a href="#communities" className="hover:text-white transition-colors">New York Strides</a></li>
-              <li><a href="#communities" className="hover:text-white transition-colors">Austin Trail Blazers</a></li>
+              <li><a href="#communities" className="hover:text-white transition-colors">Malaysia Clubs</a></li>
+              <li><a href="#communities" className="hover:text-white transition-colors">Find by State</a></li>
+              <li><a href="#communities" className="hover:text-white transition-colors">Malaysian Running Crews</a></li>
               <li><a href="#organizers" className="hover:text-white transition-colors">Start a Local Club</a></li>
             </ul>
           </div>
@@ -123,7 +123,7 @@ export default function Footer({ onOpenJoin }) {
 
         {/* Bottom info */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} Corraloop. Free group runs & community attendance for runners everywhere.</p>
+          <p>© {new Date().getFullYear()} Corraloop. Free group runs & community attendance for runners across Malaysia.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-slate-400 transition-colors">Community Guidelines</a>

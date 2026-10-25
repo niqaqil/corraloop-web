@@ -5,7 +5,7 @@ export default function JoinModal({ isOpen, onClose }) {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [city, setCity] = useState('San Francisco');
+  const [city, setCity] = useState('Petaling Jaya');
   const [role, setRole] = useState('runner'); // 'runner' or 'organizer'
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -71,7 +71,7 @@ export default function JoinModal({ isOpen, onClose }) {
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Marcus Reed"
+                  placeholder="e.g. Aina Rahman"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-darkbg border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-corral-500"
@@ -83,7 +83,7 @@ export default function JoinModal({ isOpen, onClose }) {
                 <input
                   type="email"
                   required
-                  placeholder="runner@example.com"
+                  placeholder="pelari@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-darkbg border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-loopgreen-400"
@@ -97,12 +97,11 @@ export default function JoinModal({ isOpen, onClose }) {
                   onChange={(e) => setCity(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-darkbg border border-white/10 text-white text-sm focus:outline-none focus:border-loopgreen-400"
                 >
-                  <option value="San Francisco">San Francisco, CA</option>
-                  <option value="New York">New York, NY</option>
-                  <option value="Austin">Austin, TX</option>
-                  <option value="Chicago">Chicago, IL</option>
-                  <option value="London">London, UK</option>
-                  <option value="Other">Other City</option>
+                  <option value="Petaling Jaya">Petaling Jaya, Selangor</option>
+                  <option value="Kuala Lumpur">Kuala Lumpur</option>
+                  <option value="George Town">George Town, Pulau Pinang</option>
+                  <option value="Johor Bahru">Johor Bahru, Johor</option>
+                  <option value="Other">Other Malaysian city / Bandar lain</option>
                 </select>
               </div>
 

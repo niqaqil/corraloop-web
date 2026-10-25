@@ -55,7 +55,7 @@ export default function CheckinVisualizer({ onOpenJoin }) {
                     distanceM === 25 ? 'bg-loopgreen-500 text-white' : 'bg-white/5 hover:bg-white/10 text-slate-300'
                   }`}
                 >
-                  At Arch (25m)
+                  By the Park (25m)
                 </button>
                 <button
                   onClick={() => setPreset(80)}
@@ -130,7 +130,7 @@ export default function CheckinVisualizer({ onOpenJoin }) {
                   </h4>
                   <p className="text-xs text-slate-400 mt-0.5">
                     {isWithinZone
-                      ? `You are ${distanceM}m away from Ferry Building Plaza (within the 100m boundary). Single-shot GPS accuracy: ±12m.`
+                      ? `You are ${distanceM}m away from Taman Tasik Kelana Jaya (within the 100m boundary). Single-shot GPS accuracy: ±12m.`
                       : `You are ${distanceM}m away. Move closer to within 100 meters of the meeting point to validate your attendance.`}
                   </p>
                 </div>
@@ -234,7 +234,7 @@ export default function CheckinVisualizer({ onOpenJoin }) {
 
               {/* Center Labels */}
               <div className="absolute top-4 left-6 bg-darkbg/90 border border-white/10 px-2.5 py-1 rounded-lg text-[10px] font-bold text-slate-300">
-                📍 Ferry Building Plaza
+                📍 Taman Tasik Kelana Jaya
               </div>
               <div className="absolute bottom-4 right-6 bg-darkbg/90 border border-white/10 px-2.5 py-1 rounded-lg text-[10px] font-bold text-loopgreen-400">
                 100m Perimeter Zone

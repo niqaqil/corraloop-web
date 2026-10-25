@@ -7,32 +7,32 @@ export default function RunnerStatsShowcase({ onOpenJoin }) {
   const pastRuns = [
     {
       id: 1,
-      title: 'Embarcadero Sunrise 5K',
-      community: 'Marina Sunrise Runners',
-      city: 'San Francisco',
+      title: 'Taman Tasik Kelana Jaya 5K',
+      community: 'Kelana Jaya Run Club',
+      city: 'Petaling Jaya, Selangor',
       distance: '5.0 km',
-      date: 'Yesterday, 6:30 AM',
-      accuracy: 'Verified 18m from Ferry Building',
+      date: 'Yesterday, 7:00 AM MYT',
+      accuracy: 'Verified 18m from Taman Tasik Kelana Jaya',
       badge: 'Verified Attendee'
     },
     {
       id: 2,
-      title: 'Presidio Coastal 10K',
-      community: 'Marina Sunrise Runners',
-      city: 'San Francisco',
+      title: 'Bukit Gasing Easy 10K',
+      community: 'Kelana Jaya Run Club',
+      city: 'Petaling Jaya, Selangor',
       distance: '10.0 km',
-      date: 'Last Saturday, 8:00 AM',
-      accuracy: 'Verified 24m from Crissy Field',
+      date: 'Last Saturday, 7:00 AM MYT',
+      accuracy: 'Verified 24m from Bukit Gasing',
       badge: 'Verified Attendee'
     },
     {
       id: 3,
-      title: 'Twin Peaks Sunset Hill Repeat',
-      community: 'Marina Sunrise Runners',
-      city: 'San Francisco',
+      title: 'Bukit Kiara Hill Repeats',
+      community: 'Kelana Jaya Run Club',
+      city: 'Petaling Jaya, Selangor',
       distance: '6.0 km',
-      date: '2 weeks ago, 6:00 PM',
-      accuracy: 'Verified 35m from Overlook',
+      date: '2 weeks ago, 6:30 PM MYT',
+      accuracy: 'Verified 35m from Bukit Kiara trailhead',
       badge: 'Verified Attendee'
     }
   ];
