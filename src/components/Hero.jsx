@@ -67,7 +67,15 @@ export default function Hero({ onOpenJoin, onScrollToRadar }) {
               >
                 <Navigation className="w-5 h-5 text-loopgreen-400" />
                 <span>How 100m Check-in Works</span>
-              </button>
+              </button>              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdyhx1w1g-1mSONTygQjpIRjLnaHQi_O-GqEL0OMK-le3qkMg/viewform?usp=dialog"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto px-7 py-4 rounded-full font-semibold text-base text-white bg-loopgreen-500/15 hover:bg-loopgreen-500/25 border border-loopgreen-500/30 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <span>Give Feedback & Join Beta</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
 
             {/* Core Pillars (Replaces unsupported template numbers) */}

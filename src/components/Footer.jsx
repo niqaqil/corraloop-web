@@ -71,6 +71,7 @@ export default function Footer({ onOpenJoin }) {
               <li><a href="#communities" className="hover:text-white transition-colors">Find by State</a></li>
               <li><a href="#communities" className="hover:text-white transition-colors">Malaysian Running Crews</a></li>
               <li><a href="#organizers" className="hover:text-white transition-colors">Start a Local Club</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdyhx1w1g-1mSONTygQjpIRjLnaHQi_O-GqEL0OMK-le3qkMg/viewform?usp=dialog" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Runner Feedback & Beta Survey</a></li>
             </ul>
           </div>
 
