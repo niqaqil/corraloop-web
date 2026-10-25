@@ -1,109 +1,78 @@
-# corraloop 🌀
+# Corraloop Web
 
-> **Turn Solo Sweat Into Collective Momentum.**  
-> The next-generation sports, fitness, and wellness community network where individual daily movement closes team loops.
+A Malaysia-focused showcase for **Corraloop**, an Android running-community app concept. The website introduces the product, demonstrates the intended group-run and location check-in flow, and helps runners discover a curated set of Malaysian running clubs.
 
----
+> **Project status:** The website is a product showcase, not the app backend. Its interactive cards, counts, activity feed, signup/profile modal, and check-in radar use sample/demo data. The linked feedback survey is the current way to collect runner feedback and beta interest.
 
-## 🌟 Overview
+## What the Android app demo includes
 
-**corraloop** is a modern, high-energy web application designed for runners, cyclists, triathletes, and wellness enthusiasts. Centered around the concept of "Closing the Loop," the platform unites solo workouts into shared crew streaks, regional challenges, and collective fitness milestones.
+The companion Android demo currently lets you explore:
 
-### Key Highlights
-- 🏃 **Dynamic Loop Algorithm**: Real-time concentric rings tracking Distance, Cardio/Stamina, and Mind/Recovery.
-- 🤝 **Crew & Squad Relays**: Workouts compound into squad energy reserves, unlocking collective rewards and club status.
-- 🏆 **Live Global Challenges**: Participate in real-time competitions like City vs. City relays, elevation targets, and sunrise streaks.
-- ⚡ **Interactive Ring Simulator**: Test workout durations and observe the live SVG loop close in real-time.
-- 🎨 **Modern Athlete Aesthetics**: Custom-tailored brand palette featuring vibrant Coral (`#ff6243`), Emerald Loop Green (`#10b981`), and deep Midnight Navy (`#0b0f17`).
+- Browse and search running communities, then view community details and membership state.
+- View scheduled group runs and run details, including a check-in time window.
+- Try a one-time device location check-in for a run. The demo checks GPS accuracy and distance from the meeting point (up to 100 metres); Android requests location access only when you try this action.
+- View sample runner attendance, run history, distance totals, and streaks.
+- Switch between sample runner and organizer personas. The organizer can create sample communities and runs.
 
----
+The Android demo has **no sign-in, network access, or live backend connection**. Its sample content and changes are kept in memory and reset when the app process restarts. The web check-in simulator is illustrative and does not perform a real location check.
 
-## 🛠️ Tech Stack
+## Runner feedback and beta interest
 
-- **Frontend**: [React 18](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (custom sports color palette & glow effects)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Typography**: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+Share the short [Corraloop runner feedback survey](https://docs.google.com/forms/d/e/1FAIpQLSdyhx1w1g-1mSONTygQjpIRjLnaHQi_O-GqEL0OMK-le3qkMg/viewform?usp=dialog) to help shape the app and see who is interested in beta testing.
 
----
+## Website preview
 
-## 🚀 Getting Started
+- **Live website:** [Add your deployed website URL]
+- **Android app repository:** [corraloop](https://github.com/niqaqil/corraloop)
+- **Feedback survey:** [Help shape Corraloop](https://docs.google.com/forms/d/e/1FAIpQLSdyhx1w1g-1mSONTygQjpIRjLnaHQi_O-GqEL0OMK-le3qkMg/viewform?usp=dialog)
 
-### 1. Prerequisites
-- Node.js (v18.0.0 or higher recommended)
-- npm or pnpm / yarn
+### Add screenshots to GitHub
 
-### 2. Installation
-```bash
-# Clone the repository
-git clone https://github.com/<your-username>/corraloop.git
+1. Run the site locally with `npm run dev` and capture a clear desktop screenshot of the landing page and club directory. A mobile screenshot is also useful.
+2. Add the images to a folder such as `screenshots/` in this repository.
+3. Replace the placeholders below with the real screenshot paths and add the live website URL above.
 
-# Navigate into the project directory
-cd corraloop
-
-# Install dependencies
-npm install
+```markdown
+![Corraloop Malaysia landing page](screenshots/homepage.png)
+![Malaysian running club directory](screenshots/run-clubs.png)
 ```
 
-### 3. Run Development Server
+On GitHub, the README appears at the top of the repository page. A concise description, topics such as `running`, `android`, `kotlin`, and `malaysia`, and screenshots make the project easier to understand. To pin it on your profile, open your GitHub profile and use **Customize your pins** to select the repository. To share the live site, deploy the website and add its URL in the repository’s **About** section and in this README.
+
+## Run the website locally
+
+Requirements: Node.js 18 or newer and npm.
+
 ```bash
+git clone https://github.com/niqaqil/corraloop-web.git
+cd corraloop-web
+npm install
 npm run dev
 ```
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
 
-### 4. Production Build
+Open the local URL printed by Vite (usually <http://localhost:5173>).
+
+Build and preview the production site:
+
 ```bash
 npm run build
 npm run preview
 ```
 
----
+## Website features
 
-## 🔗 Connecting to Your GitHub Repository
+- Malaysia-focused landing page and product overview.
+- Curated run-club showcase with state filters, text search, and links to club references.
+- Links to the runner feedback and beta interest survey.
+- Responsive layout for desktop and mobile screens.
 
-If you haven't linked this local directory to your GitHub account yet, follow these quick steps:
+## Tech stack
 
-1. Create a new repository on [GitHub](https://github.com/new) named `corraloop`.
-2. In your terminal inside this project folder, run:
+- React 18
+- Vite
+- Tailwind CSS
+- Lucide React icons
 
-```bash
-git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/corraloop.git
-git branch -M main
-git push -u origin main
-```
+## Related project
 
----
-
-## 📂 Project Structure
-
-```text
-corraloop/
-├── public/
-│   ├── logo-icon.svg           # High-resolution vector emblem
-│   ├── logo-full.svg           # Vector logo with wordmark
-│   ├── logo-icon.png           # Corraloop emblem (PNG fallback)
-│   └── logo-full.jpg           # Full wordmark logo (JPG fallback)
-├── src/
-│   ├── assets/                 # Brand assets (corraloop_logo.svg, corraloop_logo_only.svg)
-│   ├── components/
-│   │   ├── Navbar.jsx          # Glassmorphic header & navigation
-│   │   ├── Hero.jsx            # Dynamic hero with active sports metrics
-│   │   ├── InteractiveLoopDemo.jsx  # Interactive SVG 3-ring simulator & 4-step workflow
-│   │   ├── ChallengesSection.jsx    # Live category-filtered challenge explorer
-│   │   ├── CrewCalculator.jsx       # Real-time squad energy impact calculator
-│   │   ├── CommunityFeed.jsx        # Real-time athlete activity stream with cheers
-│   │   ├── JoinModal.jsx            # Athlete pass generator & quick tracker connect
-│   │   └── Footer.jsx          # Brand links, newsletter & GitHub status
-│   ├── App.jsx                 # Main layout and view hierarchy
-│   ├── index.css               # Tailwind & custom glow utilities
-│   └── main.jsx                # React DOM entrypoint
-├── index.html
-├── package.json
-├── tailwind.config.js
-└── vite.config.js
-```
-
----
-
-## 📄 License
-MIT © corraloop
+The Android app source and its setup notes are in [the Corraloop Android repository](https://github.com/niqaqil/corraloop).
